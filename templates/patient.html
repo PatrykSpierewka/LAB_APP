@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Page</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 60px;
+      }
+      body {
+        background-color: #ccffcc;
+      }
+    </style>
+</head>
+<body>
+    <h1> Witaj {{ user.username }} w panelu pacjenta </h1>
+    <h2>Wybierz pakiet testów laboratoryjnych:</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Wyślij</button>
+    </form>
+</body>
+</html>

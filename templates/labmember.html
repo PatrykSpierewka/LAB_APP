@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab member Page</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 60px;
+      }
+      body {
+        background-color: #f0f0f0;
+        margin: 0; /* Usunięcie domyślnego marginesu */
+      }
+      .header {
+        background-color: #ffffff; /* Białe tło */
+        padding: 20px; /* Dostosuj odstępy */
+        font-weight: bold; /* Pogrubienie tekstu */
+        display: flex; /* Użyj flexbox do zarządzania layoutem */
+        justify-content: space-between; /* Umieść elementy na krańcach kontenera */
+        align-items: center; /* Wyśrodkuj w pionie */
+      }
+      .header h2 {
+        margin: 0; /* Usuń domyślne marginesy */
+        font-size: 48px; /* Zwiększ rozmiar czcionki */
+      }
+      .welcome {
+        text-align: right; /* Wyrównaj tekst do prawej strony */
+        font-size: 48px; /* Zwiększ rozmiar czcionki */
+      }
+      .section-title {
+        font-weight: bold; /* Pogrubienie tekstu */
+        font-size: 32px; /* Zmniejsz rozmiar czcionki */
+        padding-left: 40px;
+        margin-top: 25px; /* Dodaj odstęp pionowy przed każdym tytułem sekcji */
+      }
+      .info {
+        font-size: 30px; /* Zmniejsz rozmiar czcionki */
+      }
+      .info p {
+        padding-left: 40px; /* Przesuń napisy o 40px w prawo */
+        margin: 0; /* Usunięcie domyślnego marginesu */
+      }
+      nav {
+        text-align: center;
+        margin-top: 20px;
+      }
+      nav a {
+        text-decoration: none;
+        padding: 15px 40px;
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 5px;
+        font-size: 36px;
+      }
+      nav a:hover {
+        background-color: #45a049;
+      }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>TestMate</h2>
+        <div class="welcome">
+            <h2>{{ user.username }}</h2>
+        </div>
+    </div>
+    <div class="content">
+        <div class="info">
+            <div class="section-title">Data i godzina</div>
+            <p><time datetime="2024-04-20T12:00">20 kwietnia 2024, 12:00</time></p><!--{{ data_i_godzina }}-->
+            <div class="section-title">Nazwa raportu laboratoryjnego</div>
+            <p>Badanie pacjenta X</p><!--{{ nazwa_raportu }}-->
+            <div class="section-title">Szczegóły</div>
+            <p>...................</p>
+        </div>
+    </div>
+    <nav>
+        <a href="#">Dodaj</a>
+    </nav>
+</body>
+</html>
