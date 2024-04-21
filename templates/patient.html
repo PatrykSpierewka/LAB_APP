@@ -2,24 +2,124 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Patient Page</title>
+    <title>Panel pacjenta</title>
     <style>
-      h1 {
-        text-align: center;
-        font-size: 60px;
-      }
-      body {
-        background-color: #ccffcc;
-      }
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #ffffff;
+            padding: 20px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h2 {
+            margin: 0;
+            font-size: 48px;
+            font-family: Arial, sans-serif;
+        }
+        .welcome {
+            text-align: right;
+            font-size: 48px;
+            font-family: Arial, sans-serif;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .package-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .package {
+            width: 300px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .package:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .package h3 {
+            font-size: 24px;
+            margin-top: 0;
+            font-family: Arial, sans-serif;
+        }
+        .package ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .package li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-family: Arial, sans-serif;
+        }
+        .btn {
+            background-color: #4DD8A9;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: auto;
+            font-family: Arial, sans-serif;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
-    <h1> Witaj {{ user.username }} w panelu pacjenta </h1>
-    <h2>Wybierz pakiet testów laboratoryjnych:</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Wyślij</button>
-    </form>
+    <div class="header">
+        <h2>TestMate</h2>
+        <div class="welcome">
+            <h2>{{ user.username }}</h2>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Wybierz pakiet badań</h1>
+        <div class="package-container">
+            <div class="package">
+                <h3>Podstawowy pakiet zdrowia</h3>
+                <ul>
+                    <li>Badanie glukozy</li>
+                    <li>Badanie poziomu czerwonych krwinek</li>
+                    <li>Badanie poziomu białych krwinek</li>
+                    <li>Cena: 70 PLN</li>
+                </ul>
+                <button class="btn">Wybierz</button>
+            </div>
+            <div class="package">
+                <h3>Pełny pakiet zdrowia</h3>
+                <ul>
+                    <li>Badanie glukozy</li>
+                    <li>Badanie poziomu czerwonych krwinek</li>
+                    <li>Badanie poziomu białych krwinek</li>
+                    <li>Badanie TSH</li>
+                    <li>Badanie FT3</li>
+                    <li>Badanie FT4</li>
+                    <li>Cena: 100 PLN</li>
+                </ul>
+                <button class="btn">Wybierz</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
