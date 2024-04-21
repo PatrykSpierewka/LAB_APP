@@ -10,36 +10,44 @@
       }
       body {
         background-color: #f0f0f0;
-        margin: 0; /* Usunięcie domyślnego marginesu */
+        margin: 0;
       }
       .header {
-        background-color: #ffffff; /* Białe tło */
-        padding: 20px; /* Dostosuj odstępy */
-        font-weight: bold; /* Pogrubienie tekstu */
-        display: flex; /* Użyj flexbox do zarządzania layoutem */
-        justify-content: space-between; /* Umieść elementy na krańcach kontenera */
-        align-items: center; /* Wyśrodkuj w pionie */
+        background-color: #ffffff;
+        padding: 20px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
       .header h2 {
-        margin: 0; /* Usuń domyślne marginesy */
-        font-size: 48px; /* Zwiększ rozmiar czcionki */
+        margin: 0;
+        font-size: 48px;
       }
       .welcome {
-        text-align: right; /* Wyrównaj tekst do prawej strony */
-        font-size: 48px; /* Zwiększ rozmiar czcionki */
+        text-align: right;
+        font-size: 48px;
       }
       .section-title {
-        font-weight: bold; /* Pogrubienie tekstu */
-        font-size: 32px; /* Zmniejsz rozmiar czcionki */
+        font-weight: bold;
+        font-size: 28px;
         padding-left: 40px;
-        margin-top: 25px; /* Dodaj odstęp pionowy przed każdym tytułem sekcji */
+        margin-top: 25px;
       }
       .info {
-        font-size: 30px; /* Zmniejsz rozmiar czcionki */
+        font-size: 28px;
       }
       .info p {
-        padding-left: 40px; /* Przesuń napisy o 40px w prawo */
-        margin: 0; /* Usunięcie domyślnego marginesu */
+        padding-left: 40px;
+        margin: 0;
+      }
+      .result {
+        margin-top: 10px;
+        margin-left: 40px;
+      }
+      .result input[type="number"] {
+        padding: 5px;
+        font-size: 18px;
       }
       nav {
         text-align: center;
@@ -48,7 +56,7 @@
       nav a {
         text-decoration: none;
         padding: 15px 40px;
-        background-color: #4CAF50;
+        background-color: #4DD8A9;
         color: white;
         border-radius: 5px;
         font-size: 36px;
@@ -73,6 +81,25 @@
             <p>Badanie pacjenta X</p><!--{{ nazwa_raportu }}-->
             <div class="section-title">Szczegóły</div>
             <p>...................</p>
+            <div class="section-title">Wyniki</div>
+            <div class="result">
+                <input type="number" placeholder="Glukoza" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Glukoza'">
+            </div>
+            <div class="result">
+                <input type="number" placeholder="Poziom czerwonych krwinek" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Poziom czerwonych krwinek'">
+            </div>
+            <div class="result">
+                <input type="number" placeholder="Poziom białych krwinek" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Poziom białych krwinek'">
+            </div>
+            <div class="result">
+                <input type="number" placeholder="TSH" onfocus="this.placeholder = ''" onblur="this.placeholder = 'TSH'">
+            </div>
+            <div class="result">
+                <input type="number" placeholder="FT3" onfocus="this.placeholder = ''" onblur="this.placeholder = 'FT3'">
+            </div>
+            <div class="result">
+                <input type="number" placeholder="FT4" onfocus="this.placeholder = ''" onblur="this.placeholder = 'FT4'">
+            </div>
         </div>
     </div>
     <nav>
