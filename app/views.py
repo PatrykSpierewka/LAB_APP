@@ -51,6 +51,12 @@ def doctor(request):
 def labmember(request):
     return render(request, 'labmember.html')
 
+def base(request):
+    return render(request, 'base.html')
+
+def patient_home(request):
+    return render(request, 'patient_home.html')
+
 def patient(request):
     if request.method == 'POST':
         form = TestPackageForm(request.POST)

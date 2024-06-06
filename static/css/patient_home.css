@@ -1,0 +1,96 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.patient_info_container{
+    width:100%;
+    height:100%;
+    /* background-color: cadetblue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.patient_general{
+    background-color: #f0f0f0;
+    display: flex;
+    min-width:70%;
+    max-width: 80%;
+    justify-content: space-around;
+    padding: 20px 10px;
+    border-radius: 20px;
+    justify-content: end;
+}
+.patient_general_id{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    /* background-color: bisque; */
+    width: 30%;
+    align-items: center;
+}
+.patient_general_infos{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    width: 40%;
+}
+.patient_general_info{
+    height:100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+.info{
+    font-weight: bold;
+}
+.patient_general_info_health_status{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+}
+.patient_general_info_health_status_card{
+    width: 40%;
+    padding: 10px;;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+}
+.card_title{
+    font-size: 25px;
+
+}
+.card_icon_conatiner{
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.card_item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:2px solid rgb(84, 82, 82);
+}
+.card_item_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;;
+}
+.card_icon{
+    font-size: 40px;
+ 
+}

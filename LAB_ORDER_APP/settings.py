@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap5',
+    "django_icons",
     'app.apps.AppConfig'
 ]
 
@@ -129,3 +131,9 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'app.User'
+
+DJANGO_ICONS = {
+    "ICONS": {
+        "edit": {"name": "fa-solid fa-pencil"},
+    },
+}
