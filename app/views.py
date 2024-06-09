@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import SignUpForm, LoginForm, TestPackageForm # AddResult
+from .forms import SignUpForm, LoginForm, TestPackageForm,User # AddResult
 from django.contrib.auth import authenticate, login
 from .models import Patients
 
@@ -53,7 +53,17 @@ def labmember(request):
     return render(request, 'labmember.html')
 
 def base(request):
-    return render(request, 'base.html')
+    is_doctor,is_labmember,is_patient = list(User.objects.filter(is_active=1).values_list('is_doctor','is_labmember','is_patient'))[0]
+    print(f'Actve user {is_doctor},{is_labmember},{is_patient}')
+    active_user=''
+    if is_doctor==True:
+        active_user='doctor'
+    elif is_labmember==True:
+        active_user='labmember'
+    else:
+        active_user='patient'
+    context={'active_user':active_user}
+    return render(request, 'base.html',context)
 
 def patient_home(request):
     return render(request, 'patient_home.html')
@@ -74,7 +84,7 @@ def patient(request):
 def addresult(request):
     print("Widok wywołany")  # Debug: Sprawdź, czy widok jest wywoływany
     if request.method == "POST":
-        pacjenci = health_id = Patients.objects.filter(name="Marek").values_list("health_id", flat=True).first()
+        pacjenci = Patients.objects.filter(name="Marek").values_list("health_id", flat=True).first()
         print(pacjenci)
         print("Wysłano:", request.POST)  # Debug: Sprawdź dane POST
     #     form = AddResult(request.POST)

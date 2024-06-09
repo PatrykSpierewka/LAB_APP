@@ -68,8 +68,14 @@
             </a>
           </li>
       </div>  
-      {% block patient_info %}
-      {% endblock %}
+      {% if active_user == 'doctor' %}
+          <h1>Ola Doctor {{active_user}}</h1>
+      {% elif active_user == 'labmember' %}
+          <h1>Ola {{active_user}}</h1>
+      {%else%}
+          <h1>Ola Else {{active_user}}</h1>
+      {% endif %} 
+
 
     </div>
     </main>
