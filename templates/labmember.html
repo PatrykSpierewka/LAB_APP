@@ -79,7 +79,13 @@
             <h2>{{ user.username }}</h2>
         </div>
     </div>
-    <div class="content">
+    <form method="post" action="{% url 'add_result' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="number" name="value" placeholder="Glukoza" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Glukoza'">
+      <input type="submit" value="Submit">
+  </form>
+    <!-- <div class="content">
         <div class="info">
             <div class="section-title">Data i godzina</div>
             <p><time datetime="2024-04-20T12:00">20 kwietnia 2024, 12:00</time></p><!--{{ data_i_godzina }}-->
@@ -110,6 +116,6 @@
     </div>
     <nav>
         <a href="#">Dodaj</a>
-    </nav>
+    </nav> -->
 </body>
 </html>

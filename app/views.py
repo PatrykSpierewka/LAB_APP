@@ -68,3 +68,8 @@ def patient(request):
     else:
         form = TestPackageForm()
     return render(request, 'patient.html', {'form': form})
+
+
+def add_result(request):
+    print(request)
+    return render(request,'labmember.html')

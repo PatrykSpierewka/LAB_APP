@@ -59,3 +59,7 @@ class TestPackageForm(forms.ModelForm):
     class Meta:
         model = TestPackage
         fields = ['name']
+
+
+class AddResults(forms.Form):
+    glukoze = forms.FloatField()
