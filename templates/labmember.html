@@ -79,34 +79,44 @@
             <h2>{{ user.username }}</h2>
         </div>
     </div>
-    <div class="content">
-        <div class="info">
-            <div class="section-title">Data i godzina</div>
-            <p><time datetime="2024-04-20T12:00">20 kwietnia 2024, 12:00</time></p><!--{{ data_i_godzina }}-->
-            <div class="section-title">Nazwa raportu laboratoryjnego</div>
-            <p>Badanie pacjenta X</p><!--{{ nazwa_raportu }}-->
-            <div class="section-title">Szczegóły</div>
-            <p>...................</p>
-            <div class="section-title">Wyniki</div>
-            <div class="result">
-                <input type="number" placeholder="Glukoza" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Glukoza'">
-            </div>
-            <div class="result">
-                <input type="number" placeholder="Poziom czerwonych krwinek" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Poziom czerwonych krwinek'">
-            </div>
-            <div class="result">
-                <input type="number" placeholder="Poziom białych krwinek" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Poziom białych krwinek'">
-            </div>
-            <div class="result">
-                <input type="number" placeholder="TSH" onfocus="this.placeholder = ''" onblur="this.placeholder = 'TSH'">
-            </div>
-            <div class="result">
-                <input type="number" placeholder="FT3" onfocus="this.placeholder = ''" onblur="this.placeholder = 'FT3'">
-            </div>
-            <div class="result">
-                <input type="number" placeholder="FT4" onfocus="this.placeholder = ''" onblur="this.placeholder = 'FT4'">
-            </div>
-        </div>
+<!--    <div class="content">-->
+<!--        <div class="info">-->
+<!--            <div class="section-title">Data i godzina</div>-->
+<!--            <p><time datetime="2024-04-20T12:00">20 kwietnia 2024, 12:00</time></p>-->
+<!--            <div class="section-title">Nazwa raportu laboratoryjnego</div>-->
+<!--            <p>Badanie pacjenta X</p>-->
+<!--            <div class="section-title">Szczegóły</div>-->
+<!--            <p>...................</p>-->
+<!--            <div class="section-title">Wyniki</div>-->
+<!--            <div class="result">-->
+<!--                <input type="number" placeholder="Glukoza" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Glukoza'">-->
+<!--            </div>-->
+<!--            <div class="result">-->
+<!--                <input type="number" placeholder="Poziom czerwonych krwinek" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Poziom czerwonych krwinek'">-->
+<!--            </div>-->
+<!--            <div class="result">-->
+<!--                <input type="number" placeholder="Poziom białych krwinek" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Poziom białych krwinek'">-->
+<!--            </div>-->
+<!--            <div class="result">-->
+<!--                <input type="number" placeholder="TSH" onfocus="this.placeholder = ''" onblur="this.placeholder = 'TSH'">-->
+<!--            </div>-->
+<!--            <div class="result">-->
+<!--                <input type="number" placeholder="FT3" onfocus="this.placeholder = ''" onblur="this.placeholder = 'FT3'">-->
+<!--            </div>-->
+<!--            <div class="result">-->
+<!--                <input type="number" placeholder="FT4" onfocus="this.placeholder = ''" onblur="this.placeholder = 'FT4'">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <form method="post" action="{% url 'addresult' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="number" name="value1" placeholder="Glukoza" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Glukoza'">
+        <input type="number" name="value" placeholder="Glukoza" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Glukoza'">
+        <input type="submit" value="Submit">
+    </form>
+    <div>
+        <p>Marek</p>
     </div>
     <nav>
         <a href="#">Dodaj</a>

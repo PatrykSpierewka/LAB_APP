@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from .models import User, TestPackage
+from .models import User, TestPackage #Results
 
 class LoginForm(forms.Form):
     username = forms.CharField(
@@ -59,3 +59,8 @@ class TestPackageForm(forms.ModelForm):
     class Meta:
         model = TestPackage
         fields = ['name']
+
+# class AddResult(forms.ModelForm):
+#     class Meta:
+#         model = Results
+#         fields = ['value', 'value1']

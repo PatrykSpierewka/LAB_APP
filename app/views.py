@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
-from .forms import SignUpForm, LoginForm, TestPackageForm
+from .forms import SignUpForm, LoginForm, TestPackageForm # AddResult
 from django.contrib.auth import authenticate, login
+from .models import Patients
 
 def index(request):
     return render(request, 'index.html')
@@ -68,3 +69,20 @@ def patient(request):
     else:
         form = TestPackageForm()
     return render(request, 'patient.html', {'form': form})
+
+def addresult(request):
+    print("Widok wywołany")  # Debug: Sprawdź, czy widok jest wywoływany
+    if request.method == "POST":
+        pacjenci = health_id = Patients.objects.filter(name="Marek").values_list("health_id", flat=True).first()
+        print(pacjenci)
+        print("Wysłano:", request.POST)  # Debug: Sprawdź dane POST
+    #     form = AddResult(request.POST)
+    #     if form.is_valid():
+    #         form.save()
+    #         print("Formularz zapisany")  # Debug: Sprawdź, czy formularz został zapisany
+    #         return redirect('labmember')  # Upewnij się, że ten URL istnieje
+    #     else:
+    #         print("Formularz nie jest poprawny", form.errors)  # Debug: Wypisz błędy formularza
+    # else:
+    #     form = AddResult()
+    return render(request, 'addresult.html') #{'form': form}
