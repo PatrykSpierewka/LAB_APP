@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from .models import User, TestPackage
+from .models import User, TestPackage #Results
 
 class LoginForm(forms.Form):
     username = forms.CharField(
@@ -60,6 +60,7 @@ class TestPackageForm(forms.ModelForm):
         model = TestPackage
         fields = ['name']
 
-
-class AddResults(forms.Form):
-    glukoze = forms.FloatField()
+# class AddResult(forms.ModelForm):
+#     class Meta:
+#         model = Results
+#         fields = ['value', 'value1']
