@@ -1,104 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Panel lekarza</title>
-    <style>
-        h1 {
-            text-align: center;
-            font-size: 50px;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            background-color: #f0f0f0;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .header {
-            background-color: #ffffff;
-            padding: 20px;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .header h2 {
-            margin: 0;
-            font-size: 48px;
-            font-family: Arial, sans-serif;
-        }
-        .content {
-            padding: 20px;
-            text-align: center;
-        }
-        .report-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        .report {
-            width: 300px;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .report:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
-        .report h3 {
-            font-size: 24px;
-            margin-top: 0;
-            font-family: Arial, sans-serif;
-        }
-        .report ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .report li {
-            font-size: 18px;
-            margin-bottom: 10px;
-            font-family: Arial, sans-serif;
-        }
-        .description {
-            width: 80%;
-            height: 100px;
-            margin-top: 20px;
-            resize: vertical;
-            font-size: 16px;
-            font-family: Arial, sans-serif;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        .btn {
-            background-color: #4DD8A9;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-            margin-top: auto;
-            font-family: Arial, sans-serif;
-        }
-        .btn:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h2>TestMate</h2>
-        <div class="welcome">
-            <h2>{{ user.username }}</h2>
-        </div>
-    </div>
+{% extends 'base.html' %}
+
+{% block doctor %}
     <div class="content">
         <h1>Wybierz badanie do uzupełnienia</h1>
         <div class="report-container">
@@ -131,5 +33,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}

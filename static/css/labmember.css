@@ -1,0 +1,79 @@
+.gfg {
+    margin: 5px;
+    padding: 5px;
+    background-color: green;
+    width: 500px;
+    height: 110px;
+    overflow: auto;
+    text-align: justify;
+}
+
+.test{
+    
+}
+/* h1 {
+    text-align: center;
+    font-size: 60px;
+    font-family: Arial, sans-serif;
+  }
+  body {
+    background-color: #f0f0f0;
+    margin: 0;
+  }
+  .header {
+    background-color: #ffffff;
+    padding: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header h2 {
+    margin: 0;
+    font-size: 48px;
+    font-family: Arial, sans-serif;
+  }
+  .welcome {
+    text-align: right;
+    font-size: 48px;
+    font-family: Arial, sans-serif;
+  }
+  .section-title {
+    font-weight: bold;
+    font-size: 28px;
+    padding-left: 40px;
+    margin-top: 25px;
+    font-family: Arial, sans-serif;
+  }
+  .info {
+    font-size: 28px;
+    font-family: Arial, sans-serif;
+  }
+  .info p {
+    padding-left: 40px;
+    margin: 0;
+  }
+  .result {
+    margin-top: 10px;
+    margin-left: 40px;
+  }
+  .result input[type="number"] {
+    padding: 5px;
+    font-size: 18px;
+  }
+  nav {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+  nav a {
+    text-decoration: none;
+    padding: 15px 40px;
+    background-color: #4DD8A9;
+    color: white;
+    border-radius: 5px;
+    font-size: 36px;
+  }
+  nav a:hover {
+    background-color: #45a049;
+  } */

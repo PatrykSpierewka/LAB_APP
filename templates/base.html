@@ -10,6 +10,7 @@
     <title>Sidebars · Bootstrap v5.3</title>
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
     <link href="../static/css/sidebars.css" rel="stylesheet">
+    <link href="../static/css/labmember.css" rel="stylesheet">
     <link href="../static/css/header.css" rel="stylesheet">
     <link href="../static/css/patient_home.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -36,7 +37,7 @@
                 <li><a class="dropdown-item" href="#">Settings</a></li>
                 <li><a class="dropdown-item" href="#">Profile</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                <li><a class="dropdown-item" href="{% url 'logout' %}">Sign out</a></li>
               </ul>
             </div>
           </div>
@@ -69,11 +70,17 @@
           </li>
       </div>  
       {% if active_user == 'doctor' %}
-          <h1>Ola Doctor {{active_user}}</h1>
+          <h1>{{active_user}}</h1>
+          {% block doctor %}
+          {% endblock %}
       {% elif active_user == 'labmember' %}
-          <h1>Ola {{active_user}}</h1>
+          <h1>{{active_user}}</h1>
+          {% block labmember %}
+          {% endblock %}
       {%else%}
-          <h1>Ola Else {{active_user}}</h1>
+  
+          {% block patient_home %}
+          {% endblock %}
       {% endif %} 
 
 
